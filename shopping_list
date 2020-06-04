@@ -16,8 +16,7 @@ print(shopping_cart.keys())
 for item, list in shopping_cart.items():
     print(f"Item: {item} : Quantity:-{list[0]} Price:-{list[1]}")
     if int(list[1]) <= 10:
-        sale[item] = list
+        sale[item] = list[1]
     
 print(f"Sale items {sale}")
     
-        
