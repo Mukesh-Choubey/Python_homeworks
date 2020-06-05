@@ -9,7 +9,7 @@ Has default parameters of a='172', b='16', c='254', d='1'
 If any of the following conditions are invalid then a ValueError() exception will be raised.
 Research how to raise a ValueError
 """
-import string
+
 try:
     def ip(a='172', b='16', c='254', d='1'):
         if a.isdigit and len(a) ==3 and int(a) <= 255:
@@ -17,9 +17,10 @@ try:
                 if c.isdigit and len(c) == 3 and int(c) <= 254:
                     if d.isdigit and len(d) == 1 :
                         print (f"Your ip address is:-{a}.{b}.{c}.{d}")
+        else: raise Exception("Enter carefully")               
 except ValueError:
-    raise ValueError("ValueError thrown")        
-ip()
-ip(a='123')    
+        raise ValueError("ValueError thrown")        
+#ip()
+#ip(a='123')    
 ip(a='872', b='21', c='876', d='8')
-ip(a='123', b='18', c='220', d='2')
+#ip(a='123', b='18', c='220', d='2')
